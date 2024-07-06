@@ -42,6 +42,9 @@
                 }
             });
         }
+        function refreshPage() {
+            location.reload();
+        }
         $('#error').delay(2000).fadeOut('slow');
         $('#success').delay(2000).fadeOut('slow');
         let table = new DataTable('#dataTable');

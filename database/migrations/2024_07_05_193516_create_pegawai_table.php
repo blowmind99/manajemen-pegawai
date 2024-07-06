@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('pegawai', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_lengkap');
-            $table->string('alamat');
-            $table->string('telepon');
-            $table->string('email')->unique();
-            $table->longText('photo');
+            $table->string('nama_lengkap')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('telepon')->nullable();
+            $table->string('email')->unique()->nullable();
+            $table->longText('photo')->nullable();
             $table->timestamps();
         });
     }

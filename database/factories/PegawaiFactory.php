@@ -22,6 +22,8 @@ class PegawaiFactory extends Factory
         return [
             //
             'nama_lengkap' => $this->faker->name(),
+            'jabatan'      => $this->faker->jobTitle(),
+            'gaji'         => $this->faker->randomFloat(4000000, 10000000),
             'alamat'       => $this->faker->address(),
             'telepon'      => $this->faker->phoneNumber(),
             'email'        => $this->faker->unique()->safeEmail(),

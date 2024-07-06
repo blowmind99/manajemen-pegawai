@@ -34,6 +34,8 @@
                                 </div>
                             </th>
                             <th scope="col">Nama</th>
+                            <th scope="col">Jabatan</th>
+                            <th scope="col">Gaji</th>
                             <th scope="col">Alamat</th>
                             <th scope="col">No Telepon</th>
                             <th scope="col">Email</th>
@@ -46,6 +48,8 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->nama_lengkap }}</td>
+                                <td>{{ $item->jabatan }}</td>
+                                <td>{{ $item->gaji }}</td>
                                 <td>{{ $item->alamat }}</td>
                                 <td>{{ $item->telepon }}</td>
                                 <td>{{ $item->email }}</td>

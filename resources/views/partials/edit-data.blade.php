@@ -50,6 +50,18 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="mb-20">
+                                    <label for="name" class="form-label fw-semibold text-primary-light text-sm mb-8">Jabatan</label>
+                                    <input type="text" class="form-control radius-8" id="name" value="{{ $data->jabatan }}" name="jabatan" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mb-20">
+                                    <label for="name" class="form-label fw-semibold text-primary-light text-sm mb-8">Gaji</label>
+                                    <input type="text" class="form-control radius-8" id="name" value="{{ $data->gaji }}" name="gaji" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mb-20">
                                     <label for="name" class="form-label fw-semibold text-primary-light text-sm mb-8">Telepon</label>
                                     <input type="text" class="form-control radius-8" id="name" value="{{ $data->telepon }}" name="telepon" required>
                                 </div>

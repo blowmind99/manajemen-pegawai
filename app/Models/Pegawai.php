@@ -13,6 +13,8 @@ class Pegawai extends Model
 
     protected $fillable = [
         'nama_lengkap',
+        'jabatan',
+        'gaji',
         'alamat',
         'telepon',
         'email',

@@ -23,7 +23,7 @@
                 </a>
                 <ul class="sidebar-submenu">
                     <li>
-                        <a href="javascript:void(0)">
+                        <a href="{{ url('/dashboard') }}">
                             <i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Data Pegawai
                         </a>
                     </li>

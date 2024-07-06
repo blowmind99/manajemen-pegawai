@@ -42,6 +42,8 @@ class PegawaiController extends Controller
             $this->validate($request, [
                 'photo'             => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                 'nama_lengkap'      => 'required',
+                'jabatan'           => 'required',
+                'gaji'              => 'required',
                 'email'             => 'required|email',
                 'telepon'           => 'required',
                 'alamat'            => 'required',
@@ -54,6 +56,8 @@ class PegawaiController extends Controller
             Pegawai::create([
                 'photo'             => $fileName,
                 'nama_lengkap'      => $request->nama_lengkap,
+                'jabatan'           => $request->jabatan,
+                'gaji'              => $request->gaji,
                 'email'             => $request->email,
                 'telepon'           => $request->telepon,
                 'alamat'            => $request->alamat,
@@ -100,8 +104,9 @@ class PegawaiController extends Controller
         try {
             $pegawai = Pegawai::findOrFail($id);
             $this->validate($request, [
-                'photo'             => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                 'nama_lengkap'      => 'required',
+                'jabatan'           => 'required',
+                'gaji'              => 'required',
                 'email'             => 'required|email',
                 'telepon'           => 'required',
                 'alamat'            => 'required',
@@ -118,22 +123,26 @@ class PegawaiController extends Controller
                 $pegawai->update([
                     'photo'             => $fileName,
                     'nama_lengkap'      => $request->nama_lengkap,
+                    'jabatan'           => $request->jabatan,
+                    'gaji'              => $request->gaji,
                     'email'             => $request->email,
                     'telepon'           => $request->telepon,
                     'alamat'            => $request->alamat,
                 ]);
             } else {
+                $pegawai = Pegawai::findOrFail($id);
                 $pegawai->update([
                     'nama_lengkap'      => $request->nama_lengkap,
+                    'jabatan'           => $request->jabatan,
+                    'gaji'              => $request->gaji,
                     'email'             => $request->email,
                     'telepon'           => $request->telepon,
                     'alamat'            => $request->alamat,
                 ]);
             }
-    
-    
             return redirect()->back()->with('success', 'Data pegawai berhasil disimpan.');
         } catch (\Exception $e) {
+            dd($e);
             return redirect()->back()->with('error', 'Terjadi kesalahan: ' . $e->getMessage());
         }
     }

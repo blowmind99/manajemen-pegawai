@@ -28,25 +28,37 @@
                         <div class="col-sm-6">
                             <div class="mb-20">
                                 <label for="name" class="form-label fw-semibold text-primary-light text-sm mb-8">Nama Lengkap</label>
-                                <input type="text" class="form-control radius-8" id="name" placeholder="{{ $data->nama_lengkap }}" readonly>
+                                <input type="text" class="form-control radius-8" id="name" value="{{ $data->nama_lengkap }}" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-20">
+                                <label for="name" class="form-label fw-semibold text-primary-light text-sm mb-8">Jabatan</label>
+                                <input type="text" class="form-control radius-8" id="name" value="{{ $data->jabatan }}" readonly>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="mb-20">
                                 <label for="name" class="form-label fw-semibold text-primary-light text-sm mb-8">Alamat</label>
-                                <input type="text" class="form-control radius-8" id="name" placeholder="{{ $data->alamat }}" readonly>
+                                <input type="text" class="form-control radius-8" id="name" value="{{ $data->alamat }}" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-20">
+                                <label for="name" class="form-label fw-semibold text-primary-light text-sm mb-8">Gaji</label>
+                                <input type="text" class="form-control radius-8" id="name" value="{{ $data->gaji }}" readonly>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="mb-20">
                                 <label for="name" class="form-label fw-semibold text-primary-light text-sm mb-8">Telepon</label>
-                                <input type="text" class="form-control radius-8" id="name" placeholder="{{ $data->telepon }}">
+                                <input type="text" class="form-control radius-8" id="name" value="{{ $data->telepon }}" readonly>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="mb-20">
                                 <label for="name" class="form-label fw-semibold text-primary-light text-sm mb-8">Email</label>
-                                <input type="text" class="form-control radius-8" id="name" placeholder="{{ $data->email }}">
+                                <input type="text" class="form-control radius-8" id="name" value="{{ $data->email }}" readonly>
                             </div>
                         </div>
                     </div>
