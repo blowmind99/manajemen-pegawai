@@ -70,32 +70,34 @@
                                     </a>
                                 </td>
                             </tr>
-                            <div class="modal fade" id="delete{{ $item->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Delete</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <!-- Modal Delete Data -->
+                                <div class="modal fade" id="delete{{ $item->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Delete</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <form action="{{ url('/delete/pegawai/'.$item->id) }}" method="post">
+                                                @csrf
+                                                @method('POST')
+                                                <div class="modal-body">
+                                                    <div class="d-flex justify-content-center">
+                                                        <img src="{{ url('assets/images/confirmation-delete.gif') }}" alt="">
+                                                    </div>
+                                                    <div class="d-flex justify-content-center">
+                                                        <p class="text-danger-main mb-16">Are You Sure Delete This Data?</p>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <form action="{{ url('/delete/pegawai/'.$item->id) }}" method="post">
-                                            @csrf
-                                            @method('POST')
-                                            <div class="modal-body">
-                                                <div class="d-flex justify-content-center">
-                                                    <img src="{{ url('assets/images/confirmation-delete.gif') }}" alt="">
-                                                </div>
-                                                <div class="d-flex justify-content-center">
-                                                    <p class="text-danger-main mb-16">Are You Sure Delete This Data?</p>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-danger">Delete</button>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
-                            </div>
+                            <!--- End Modal Delete Data -->
                         @endforeach
                     </tbody>
                 </table>
